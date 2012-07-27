@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>test</title>
+<script type="text/javascript" src="sdk/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="sdk/underscore.js"></script>
+<script type="text/javascript" src="sdk/backbone.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var object = {};
+
+_.extend(object, Backbone.Events);
+
+object.on("alert", function(msg) {
+  alert("Triggered " + msg);
+});
+
+object.trigger("alert", "an event");
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+    "projectName": "Ab",
+    "deployDir": "Ab",
+    "licenseText": "Ab",
+    "pkgs": [
+     {
+        "name": "Ab",
+        "file": "/Ab.js",
+        "isDebug": true,
+        "fileIncludes": [
+        	{
+	            "text": "underscore.js",
+	            "path": "sdk/"
+	        },
+        	{
+	            "text": "backbone.js",
+	            "path": "sdk/"
+	        },
+	        {
+	            "text": "DomHelper.js",
+	            "path": "sdk/Ab/util/"
+	        },
+			{
+	            "text": "Format.js",
+	            "path": "sdk/Ab/util/"
+	        },
+			{
+	            "text": "Template.js",
+	            "path": "sdk/Ab/util/"
+	        },
+			{
+	            "text": "Template-more.js",
+	            "path": "sdk/Ab/util/"
+	        },
+			{
+	            "text": "XTemplate.js",
+	            "path": "sdk/Ab/util/"
+	        },
+	        
+	        
+	        {
+	            "text": "Application.js",
+	            "path": "sdk/Ab/"
+	        },
+	        {
+	            "text": "ClassManager.js",
+	            "path": "sdk/Ab/"
+	        },
+	        {
+	            "text": "ClassDefine.js",
+	            "path": "sdk/Ab/"
+	        },
+	        {
+	            "text": "Observable.js",
+	            "path": "sdk/Ab/"
+	        },
+	        {
+	            "text": "Controller.js",
+	            "path": "sdk/Ab/"
+	        }
+       ]
+     }
+      ],
+       "resources": [{
+        "src": "sdk/",
+        "dest": "sdk/",
+        "filters": ".*\\.js"
+    }]
+}

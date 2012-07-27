@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/calib/base.js"></script>
+<script type="text/javascript" src="js/calib/util/DelayedTask.js"></script>
+<script type="text/javascript" src="js/calib/util/Observable.js"></script>
+</head>
+<body>
+	<input type="button" id='save' value="save">
+</body>
+<script type="text/javascript">
+	
+	var Panel = Yx.extend(Yx.util.Observable,{
+		constructor: function(config){
+			this.color = config.color;
+			this.addEvents('fired');
+			Panel.superclass.constructor.call(this,config);
+			this.bindListeners();
+		},
+		
+		bindListeners: function(){
+			this.on('fired',this.onFired,this);
+		},
+		
+		onFired: function(){
+			alert(this.color);
+		}
+	});
+	
+	var p = new Panel({color:'red'});
+	
+	document.getElementById('save').addEventListener('click',function(e){
+		p.fireEvent('fired');
+	})
+	
+</script>
+</html>

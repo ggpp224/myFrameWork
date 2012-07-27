@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../Ab/core/base.js"></script>
+<script type="text/javascript" src="../../Ab/core/tpl.js"></script>
+
+</head>
+<body>
+	1
+	<div id="d1" style="border:solid blue 1px;"></div>
+	2
+	<div id="d2" style="border:solid blue 1px;"></div>
+	3
+	<div id="d3" style="border:solid blue 1px;"></div>
+	4
+	<div id="d4" style="border:solid blue 1px;"></div>
+	5
+	<div id="d5" style="border:solid blue 1px;"></div>
+	6
+	<div id="d6" style="border:solid blue 1px;"></div>
+	7
+	<div id="d7" style="border:solid blue 1px;"></div>
+</body>
+<script type="text/javascript">
+	
+	/* //对象
+	 var tpl1 = new Yx.Template(
+		'<div>',
+			'<div>aaaa: {id}</div>',
+			'<div>bbb: {name}</div>',
+		'<div>',
+		'<div>second div</div>'
+	);
+	
+	//tpl.overwrite(document.getElementById('div'));
+	tpl1.append(document.getElementById('d1'),{id:11111,name:2222}); 
+	
+	//数组
+	var tp2 = new Yx.Template(
+			'<div>',
+				'<div>aaaa: {0}</div>',
+				'<div>bbb: {1}</div>',
+			'<div>',
+			'<div>second div</div>'
+		);
+		
+		tp2.append(document.getElementById('d2'),[33,44]); */
+
+//--------------------------------------------------------		
+		var data = {
+			    name: 'Jack Slocum',
+			    title: 'Lead Developer',
+			    company: 'Yx JS, LLC',
+			    email: 'jack@Yxjs.com',
+			    address: '4 Red Bulls Drive',
+			    city: 'Cleveland',
+			    state: 'Ohio',
+			    zip: '44102',
+			    drinks: ['Red Bull', 'Coffee', 'Water'],
+			    kids: [{
+			        name: 'Sara Grace',
+			        age:3
+			    },{
+			        name: 'Zachary',
+			        age:2
+			    },{
+			        name: 'John James',
+			        age:1
+			    }]
+			};
+		
+		//循环
+		/* var tpl3 = new Yx.XTemplate(
+			    '<p>Kids: ',
+			    '<tpl for=".">',       // process the data.kids node
+			        '<p>{#}. {name}</p>',  // use current array index to autonumber
+			    '</tpl></p>'
+			);
+		tpl3.overwrite(document.getElementById('d3'), data.kids);
+		
+		//------------------------------
+		var tpl4 = new Yx.XTemplate(
+		    '<p>Name: {name}</p>',
+		    '<p>Title: {title}</p>',
+		    '<p>Company: {company}</p>',
+		    '<p>Kids: ',
+		    '<tpl for="kids">',     // interrogate the kids property within the data
+		        '<p>{name}</p>',
+		    '</tpl></p>'
+		);
+		tpl4.overwrite(document.getElementById('d4'), data);  // pass the root node of the data object
+		
+		//-------------------------------
+		var tpl5 = new Yx.XTemplate(
+		    '<p>{name}\'s favorite beverages:</p>',
+		    '<tpl for="drinks">',
+		       '<div> - {.}</div>',
+		    '</tpl>'
+		);
+		tpl5.overwrite(document.getElementById('d5'), data);
+		 */
+		//--------------------------------
+		var tpl6 = new Ab.XTemplate(
+		    '<p>Name: {name}</p>',
+		    '<p>Kids: ',
+		    '<tpl for="kids">',
+		        '<tpl if="age &gt; 1">',
+		            '<p>{name}</p>',
+		            '<p>Dad: {parent.name}</p>',
+		        '</tpl>',
+		    '</tpl></p>'
+		);
+		tpl6.overwrite(document.getElementById('d6'), data);
+		
+	
+</script>
+</html>

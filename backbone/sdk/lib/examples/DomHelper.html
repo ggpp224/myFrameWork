@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/calib/base.js"></script>
+<script type="text/javascript" src="js/calib/util/DomHelper.js"></script>
+</head>
+<body>
+	<input type="button" id='save' value="save">
+	
+	beforeBegin
+	<div id="div">
+	afterBegin
+	----------------------
+	beforeEnd
+	</div>
+	afterEnd
+	
+
+</body>
+<script type="text/javascript">
+	var div = document.getElementById('div');
+	//Yx.DomHelper.append(div,'<a href="#">test</a>')
+	Yx.DomHelper.insertBefore(div,'<a href="#">test</a>')
+</script>
+</html>
